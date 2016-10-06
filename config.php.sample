@@ -1,0 +1,7 @@
+<?php
+
+# rename to config.php
+
+$oauth_credentials = '../client_id.json';
+
+?>
