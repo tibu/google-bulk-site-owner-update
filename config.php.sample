@@ -3,5 +3,6 @@
 # rename to config.php
 
 $oauth_credentials = '../client_id.json';
+$log_file = 'google-site-verification.log';
 
 ?>
