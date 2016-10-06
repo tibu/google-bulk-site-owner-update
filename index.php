@@ -25,14 +25,9 @@ if (!$oauth_credentials) {
 $redirect_uri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 
 $client = new Google_Client();
-#$client->setAuthConfig('/home/tibu/client_id.json');
 $client->setAuthConfig($oauth_credentials);
 $client->setRedirectUri($redirect_uri);
-#$client->addScope("https://www.googleapis.com/auth/drive");
 $client->addScope("https://www.googleapis.com/auth/siteverification");
-#$client->setScopes([Google_Service_Webmasters::WEBMASTERS, Google_Service_SiteVerification::SITEVERIFICATION]);
-
-#$service = new Google_Service_Drive($client);
 
 if (isset($_GET['code'])) {
     $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
